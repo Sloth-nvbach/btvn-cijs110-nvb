@@ -1,4 +1,4 @@
-import { containChar, firstElement, firstThree, formatCurrency, formatDate, greet, isEven, isPrime, max, productInfo, repeatString, square, stringLength, sum, sumGreaterThan, sumOdd, sumUpTo, toUpperCase } from "./utils";
+import { containChar, firstElement, firstThree, formatCurrency, formatDate, greet, isEven, isPrime, max, productInfo, repeatString, square, stringLength, sum, sumGreaterThan, sumOdd, sumUpTo, toUpperCase } from "./utils.js";
 productInfo("Sách", 20000)
 greet("An");
 sumUpTo(5);

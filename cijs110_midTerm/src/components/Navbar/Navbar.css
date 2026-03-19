@@ -1,0 +1,42 @@
+.navbar-container {
+    display: flex;
+    align-items: center;
+    width: 1174px;
+    height: 48px;
+    margin: 83px 0 83px 29px;
+    background-color: #374151;
+    justify-content: space-between;
+    
+}
+
+.navbar-brand {
+    color: #FFFFFF;
+    width: 201.44px;
+    height: 32px;
+    font-weight: bold;
+    font-size: 36px;
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar-text {
+    color: #868686;
+    height: 32px;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar-search input {
+    width: 374.58px;
+    height: 48px;
+    border-radius: 20px;
+    border: none;
+    padding: 18px 8px;
+    background-color: #374151;
+}
+
+.navbar-search input::placeholder {
+    color: #868686;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+
+}

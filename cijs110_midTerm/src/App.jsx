@@ -9,6 +9,7 @@ import { moviesData } from "../src/data/data.js";;
 function App() {
   const featuedMovie = moviesData.find(movie => movie.id === "1");
   const lastestRelease = moviesData.filter(movie => movie.id !== "1");
+  const bannerImage = featuedMovie ? featuedMovie.image.replace("../assets/images/", "/images/") : "";
 
   return (
     <div style={{
@@ -27,7 +28,7 @@ function App() {
 
       {featuedMovie && (
         <Carousel
-          image={featuedMovie.image}
+          image={bannerImage}
           movieName={featuedMovie.movieName}
           description={featuedMovie.description} />
       )}
@@ -42,14 +43,18 @@ function App() {
           width: "100%",
           flexWrap: "wrap"
         }}>
-          {lastestRelease.map((movie) => (
-            <Card
-              key={movie.id}
-              image={movie.image}
-              movieName={movie.movieName}
-              episode={movie.episode}
-            />
-          ))}
+          {lastestRelease.map((movie) => {
+            const cleanImagePath = movie.image.replace("../assets/images/", "/images/");
+
+            return (
+              <Card
+                key={movie.id}
+                image={cleanImagePath}
+                movieName={movie.movieName}
+                episode={movie.episode}
+              />
+            )
+          })}
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@ import { moviesData } from "../src/data/data.js";;
 
 function App() {
   const featuedMovie = moviesData.find(movie => movie.id === "1");
-  const lastestRelease = moviesData.find(movie => movie.id !== "1");
+  const lastestRelease = moviesData.filter(movie => movie.id !== "1");
 
   return (
     <div style={{

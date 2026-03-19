@@ -7,8 +7,8 @@ const Carousel = ({image, movieName, description}) => {
             <img src={image} alt="" className="carousel-img"/>
             <div className="carousel-overlay"></div>
             <div className="carousel-content">
-                <p className="title">{movieName}</p>
-                <p className="description">{description}</p>
+                <p className="carousel-title">{movieName}</p>
+                <p className="carousel-description">{description}</p>
             </div>
         </div>
     )

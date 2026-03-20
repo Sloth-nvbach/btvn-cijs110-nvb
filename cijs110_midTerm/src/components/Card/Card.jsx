@@ -1,9 +1,9 @@
 import React from "react";
 import "./Card.css";
-const Card = ({ image, movieName, episode }) => {
+const Card = ({ image, movieName, episode, onclick }) => {
     return (
         <div className="movie-card">
-            <div className="movie-container">
+            <div className="movie-container" onClick={onclick}>
                 <img src={image} alt={movieName} className="movie-poster" />
                 <div className="movie-blur"></div>
                 <p className="episode-info">Episode {episode}</p>

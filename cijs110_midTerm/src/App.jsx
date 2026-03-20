@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from './components/Navbar/Navbar';
 import Text from './components/Text/Text';
 import Carousel from './components/Carousel/Carousel';
@@ -7,9 +7,9 @@ import Card from './components/Card/Card';
 import { moviesData } from "../src/data/data.js";;
 
 function App() {
-  const featuredMovie = moviesData.find(movie => movie.id === "1");
+  const [activeMovie, setActiveMovie] = useState(moviesData.find(movie => movie.id === "1"))
   const latestRelease = moviesData.filter(movie => movie.id !== "1");
-  const bannerImage = featuredMovie ? featuredMovie.image.replace("../assets/images/", "/images/") : "";
+  const bannerImage = activeMovie ? activeMovie.image.replace("../assets/images/", "/images/") : "";
 
   return (
     <div style={{
@@ -31,11 +31,11 @@ function App() {
       <Text color="#FFFFFF" fontSize="32px" fontWeight="600" style={{ lineHeight: "112.5%" }}>Explore</Text>
       <Text color="#868686" fontSize="22px" fontWeight="400" style={{ lineHeight: "112.5%", marginTop: "8px" }}>What are you gonna watch today ?</Text>
 
-      {featuredMovie && (
+      {activeMovie && (
         <Carousel
           image={bannerImage}
-          movieName={featuredMovie.movieName}
-          description={featuredMovie.description}
+          movieName={activeMovie.movieName}
+          description={activeMovie.description}
         />
       )}
 
@@ -67,6 +67,8 @@ function App() {
                 image={cleanImagePath}
                 movieName={movie.movieName}
                 episode={movie.episode}
+
+                onclick={() => setActiveMovie(movie)}
               />
             )
           })}

@@ -22,9 +22,11 @@ function App() {
       {/* Navbar */}
       <Navbar />
 
+
+
       {/* Body */}
-      <Text color="#FFFFFF" fontSize="32px" fontWeight="bold">Explore</Text>
-      <Text color="#868686" fontSize="22px" fontWeight="normal">What are you gonna watch today ?</Text>
+      <Text color="#FFFFFF" fontSize="32px" fontWeight="600" style={{ lineHeight: "112.5%" }}>Explore</Text>
+      <Text color="#868686" fontSize="22px" fontWeight="400" style={{ lineHeight: "112.5%", marginTop: "8px" }}>What are you gonna watch today ?</Text>
 
       {featuedMovie && (
         <Carousel
@@ -33,13 +35,22 @@ function App() {
           description={featuedMovie.description} />
       )}
 
+
+
       {/* Cards */}
-      <div>
-        <Text>New Release</Text>
+      <div style={{
+        marginTop: "50px",
+        display: "flex",
+        flexDirection: "column",
+        gap: "24px"
+      }}>
+        <Text color="#FFFFFF" fontSize={"36px"} fontWeight="600" style={{ lineHeight: "32px" }}>New Release</Text>
+
+
         <div style={{
           display: "flex",
+          flexDirection: "row",
           gap: "30px",
-          marginTop: "20px",
           width: "100%",
           flexWrap: "wrap"
         }}>

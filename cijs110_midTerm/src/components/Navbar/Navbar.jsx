@@ -4,9 +4,10 @@ import './Navbar.css';
 const Navbar = () => {
     return (
         <nav className="navbar-container">
-            <div className="navbar-brand">Anonime</div>
-            <div className="navbar-text">Home</div>
-            <div className="navbar-text">List anime</div>
+            <h1 className="navbar-brand">Anonime</h1>
+            <p className="navbar-text">Home</p>
+            <p className="navbar-text">List anime</p>
+            
             <div className="navbar-search">
                 <input type="text" placeholder="Search anime or movie" />
             </div>

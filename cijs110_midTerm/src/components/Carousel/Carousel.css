@@ -41,17 +41,18 @@
 
 .carousel-title {
     font-family: "Poppins", sans-serif;
-    font-weight: semi-bold;
+    font-weight: 600;
     font-size: 36px;
+    color: #FFFFFF;
 }
 
 .carousel-description {
     font-family: "Poppins", sans-serif;
     font-weight: normal;
-    font-weight: 600;
-    font-size: 36px;
+    /* font-weight: 400; */
+    font-size: 16px;
     margin: 0;
-    line-height: 64px;
+    line-height: 27px;
     color: #FFFFFF;
     align-self: stretch;
     display: -webkit-box;

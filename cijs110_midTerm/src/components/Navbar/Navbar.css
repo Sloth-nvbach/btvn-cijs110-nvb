@@ -35,6 +35,17 @@
     color: #FFFFFF;
 }
 
+.navbar-search {
+    display: flex;
+    align-items: center;
+    padding: 8px 18px;
+    width: 374.58px;
+    height: 48px;
+    background: #374151;
+    border-radius: 37px;
+    box-sizing: border-box;
+}
+
 .navbar-search input {
     width: 100%;
     background: transparent;
